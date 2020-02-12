@@ -1,0 +1,30 @@
+-var head_url = 'https://popov.mastervision.su/taro-2.0/';
+-var head_title = '«Таро 2.0»';
+-var head_description = 'Обучающий курс Василия Попова';
+//- -var head_img = 'img/banner.jpg';
+-var styles = 'css/styles.min.css';
+-var fav_ico = 'favicon.ico';
+-var fav_png = 'favicon.png';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target,id)
+	a.button(class=cl href=href target=target id=id)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/main/1.main.pug
+		include pug/main/2.about.pug
+		include pug/main/3.lets.pug
+		include pug/main/4.plan.pug
+		include pug/main/5.technics.pug
+		include pug/main/6.prices.pug
+		include pug/main/7.footer.pug
+		include pug/main/8.scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
