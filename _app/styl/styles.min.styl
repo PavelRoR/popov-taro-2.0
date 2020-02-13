@@ -1,8 +1,69 @@
+A='Akrobat', sans-serif
+AB='AkrobatBold', sans-serif
+ABk='AkrobatBlack', sans-serif
+PNBk = 'ProximaNovaBlack',sans-serif;
+
+@font-face {
+	font-family: 'ProximaNovaBlack';
+	src: url('../fonts/ProximaNovaBlack.eot');
+	src: url('../fonts/ProximaNovaBlack.eot') format('embedded-opentype'),
+		 url('../fonts/ProximaNovaBlack.woff2') format('woff2'),
+		 url('../fonts/ProximaNovaBlack.woff') format('woff'),
+		 url('../fonts/ProximaNovaBlack.ttf') format('truetype'),
+		 url('../fonts/ProximaNovaBlack.svg#ProximaNovaBlack') format('svg');
+	font-display: fallback;
+	font-weight: 900
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Akrobat';
+	src: url('../fonts/Akrobat.eot');
+	src: url('../fonts/Akrobat.eot') format('embedded-opentype'),
+		 url('../fonts/Akrobat.woff2') format('woff2'),
+		 url('../fonts/Akrobat.woff') format('woff'),
+		 url('../fonts/Akrobat.ttf') format('truetype'),
+		 url('../fonts/Akrobat.svg#Akrobat') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AkrobatBold';
+	src: url('../fonts/AkrobatBold.eot');
+	src: url('../fonts/AkrobatBold.eot') format('embedded-opentype'),
+		 url('../fonts/AkrobatBold.woff2') format('woff2'),
+		 url('../fonts/AkrobatBold.woff') format('woff'),
+		 url('../fonts/AkrobatBold.ttf') format('truetype'),
+		 url('../fonts/AkrobatBold.svg#AkrobatBold') format('svg');
+	font-display: fallback;
+	font-weight: bold
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AkrobatBlack';
+	src: url('../fonts/AkrobatBlack.eot');
+	src: url('../fonts/AkrobatBlack.eot') format('embedded-opentype'),
+		 url('../fonts/AkrobatBlack.woff2') format('woff2'),
+		 url('../fonts/AkrobatBlack.woff') format('woff'),
+		 url('../fonts/AkrobatBlack.ttf') format('truetype'),
+		 url('../fonts/AkrobatBlack.svg#AkrobatBlack') format('svg');
+	font-display: fallback;
+	font-weight: 900
+	font-style: normal;
+}
+
+@import '../_css/bootstrap.min.css'
+
 *
 	margin 0
 	padding 0
 	outline none
-
+body
+	font-size: 18px
+	font-family: A
+	background-color: #fff
+	color #000
+	line-height: 1.56
 a
 	color: #000
 	&:focus
@@ -52,7 +113,47 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.general-title
+	font-size: 30px
+	text-align: center
+	font-family: ABk
+	margin-bottom: 40px
+	text-transform: uppercase
+	color #cc5500;
+.button
+	position: relative;
+	font-family: ABk
+	display block
+	margin 0 auto
+	width 100%
+	max-width 280px
+	text-align: center
+	color: white;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px #cc5500;
+	user-select: none;
+	padding: 18px 10px
+	outline: none;
+	border-radius: 3px;
+	background: linear-gradient(to left, rgba(0,0,0,.3), rgba(0,0,0,.0) 50%, rgba(0,0,0,.3)), linear-gradient(#d77d31, #fe8417, #d77d31);
+	background-size: 100% 100%, auto;
+	background-position: 50% 50%;
+	box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, #000 0 10px 15px -10px
+	transition: 0.2s;
+	text-transform: uppercase
+	border: 1px solid rgba(#fff,.56)
+	&:focus
+		color #fff
+	&:hover
+		background-size: 140% 100%, auto;
+		color #fff
+		// box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, #000 0 10px 15px -10px, 0 0 20px 6px rgba(#fff,.9)
+	&:active
+		top: 1px;
+		color: #ffdead;
+		box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, 0 10px 10px -9px #000;
 
+@import 'main/0.header'
 @import 'main/1.main'
 @import 'main/2.about'
 @import 'main/3.lets'

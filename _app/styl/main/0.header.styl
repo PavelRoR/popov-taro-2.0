@@ -1,8 +1,35 @@
 header
-	a(href="https://mastervision.su", target="_blank")
-		img#logo(src="img/logo.png", alt="Логотип")
-	.contacts
-		//- a.contact.contact-tel(href="callto:8-929-568-87-50" target="_blank") 8-929-568-87-50
-		a.contact.contact-tel(href="callto:8-499-346-79-46" target="_blank") 8-499-346-79-46
-		a.contact.contact-skype(href="https://join.skype.com/invite/gkwrZmJPOtuf" target="_blank") support-mastervision
-		a.contact.contact-email(href="mailto:info@mastervision.su" target="_blank") info@mastervision.su
+	padding 15px 0
+	overflow hidden
+	background-color: rgba(#000,.7)
+.header-logo
+	display block
+	float left
+	width: 100px
+.contacts
+	float: right
+	text-align: right
+.contact
+	line-height: 36px
+	color #fff
+	font-size: 16px
+	font-family: 'Arial', sans-serif
+	margin-left: 14px
+	padding-left: 25px
+	background-repeat no-repeat
+	background-position: left center
+	background-size: 17px
+	&&-tel
+		background-image url(../img/icons/phone.png)
+		margin-left: 0
+	&&-skype
+		background-image url(../img/icons/skype.png)
+	&&-email
+		background-image url(../img/icons/envelope.png)
+		padding-left: 27px
+	&:focus
+		text-decoration: none
+		color #fff
+	&:hover
+		text-decoration: underline
+		color #fff
